@@ -3798,13 +3798,16 @@ body.minimal{
     height:70vh
 }
 .hero-full-container h1{
-    font-family:Roboto,Helvetica,Arial,sans-serif;
-    font-weight:900
+    /* font-family: Roboto,Helvetica,Arial,sans-serif; */
+    /* font-family: "Roboto Mono", "Courier New", monospace; */
+    /* font-family: "Courier New", Courier, monospace; */
+    font-weight:850;
+    color: #242424
 }
 .hero-full-container .hero-full-wrapper{
     display:table;
     width:100%;
-    height:70vh;
+    height:65vh;
     min-height:50vh
 }
 .hero-full-container .hero-full-wrapper .text-content{
