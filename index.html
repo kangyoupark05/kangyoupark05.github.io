@@ -115,22 +115,30 @@
           <ul class="list-icons">
             <li>
               <span class="fa-icon">
-                <a href="https://github.com/kangyoupark05"><i class="fa fa-github"></i></a>
+                <a href="https://github.com/kangyoupark05" target="_blank" rel="noopener noreferrer">
+                  <i class="fa fa-github"></i>
+                </a>
               </span>
             </li>
             <li>
               <span class="fa-icon">
-                <a href="https://www.linkedin.com/in/kangyou-park"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/kangyou-park" target="_blank" rel="noopener noreferrer">
+                  <i class="fa fa-linkedin"></i>
+                </a>
               </span>
             </li>
             <li>
               <span class="fa-icon">
-                <a href="https://www.instagram.com/kangyou_park_/"><i class="fa fa-instagram"></i></a>
-              </span>
-            </li>
-          </ul>
-          <span class="fa-icon"><i class="fa fa-envelope"></i></span><span class="email-text">&nbsp; kangyoupark05@gmail.com</span>
+                <a href="https://www.instagram.com/kangyou_park_/" target="_blank" rel="noopener noreferrer">
+                  <i class="fa fa-instagram"></i>
+                  </a>
+                </span>
+              </li>
+            </ul>
+          <span class="fa-icon"><i class="fa fa-envelope"></i></span>
+          <span class="email-text">&nbsp; kangyoupark05@gmail.com</span>
         </div>
+      </div>
       
       <div class="col-xs-12 col-md-6">
         <div class="template-example">
@@ -166,7 +174,6 @@
   </div>
 </footer>
 
-<script src="config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script>
@@ -215,7 +222,7 @@
       });
     });
 
-    emailjs.init(emailConfig.publicKey);
+    emailjs.init("ieyTmttmPLkb3Utrl");
     
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -227,7 +234,7 @@
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        emailjs.sendForm(emailConfig.serviceId, emailConfig.templateId, this)
+        emailjs.sendForm('personal_account', 'template_id13txu', this)
           .then(function() {
             alert('Message sent successfully!');
             contactForm.reset();
