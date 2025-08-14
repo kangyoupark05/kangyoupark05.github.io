@@ -4227,8 +4227,11 @@ html {
   border-radius: 50%;
   object-fit: cover;
   border: 6px solid #e0e0e0;
-  margin-top: 20px;
-  margin-left: 90px
+  margin-top: 135px;
+  margin-left: 90px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .about-text {
