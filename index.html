@@ -131,6 +131,26 @@
           </ul>
           <span class="fa-icon"><i class="fa fa-envelope"></i></span><span class="email-text">&nbsp; kangyoupark05@gmail.com</span>
         </div>
+      
+      <div class="col-xs-12 col-md-6">
+        <div class="template-example">
+          <h2 class="template-title-example">Send an email</h2>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" name="from_name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="from_email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="5" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-default btn-lg">Send Message</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -145,6 +165,9 @@
     </div>
   </div>
 </footer>
+
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {
@@ -191,9 +214,36 @@
         }
       });
     });
+
+    emailjs.init(emailConfig.publicKey);
+    
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        emailjs.sendForm(emailConfig.serviceId, emailConfig.templateId, this)
+          .then(function() {
+            alert('Message sent successfully!');
+            contactForm.reset();
+          })
+          .catch(function(error) {
+            alert('Failed to send message. Please try again.');
+            console.error('EmailJS error:', error);
+          })
+          .finally(function() {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          });
+      });
+    }
   });
 </script>
-
 
 <script type="text/javascript" src="main.js"></script></body>
 
