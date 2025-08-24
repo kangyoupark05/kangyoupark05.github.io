@@ -3805,7 +3805,7 @@ body.minimal{
 }
 .hero-full-container h1{
     /* font-family: Roboto,Helvetica,Arial,sans-serif; */
-    /* font-family: "Roboto Mono", "Courier New", monospace; */
+    font-family: "Roboto Mono", "Courier New", monospace;
     /* font-family: "Courier New", Courier, monospace; */
     font-weight:850;
     color: #242424
@@ -3907,7 +3907,7 @@ p{
     content:"";
     position:absolute;
     height:100%;
-    background-color:#000;
+    /* background-color:#000; */
     width:1px
 }
 .h2:before,h2:before{
@@ -4227,7 +4227,7 @@ html {
   border-radius: 50%;
   object-fit: cover;
   border: 6px solid #e0e0e0;
-  margin-top: 135px;
+  margin-top: 140px;
   margin-left: 90px;
   position: relative;
   top: 50%;
@@ -4333,3 +4333,87 @@ html {
         float: none;
     }
 }
+
+.resume-main-title {
+    font-size: 35px !important;
+    color: #34495e !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+}
+
+.resume-photo{
+    max-height: 200px !important;
+    max-width: 200px !important;
+    height: 80%;
+    object-fit: contain;
+}
+
+.resume-logo {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    height: 100%; 
+    padding: 0; 
+}
+
+.resume-row {
+    padding: 10px 20px;
+    align-items: stretch; 
+    display: flex; 
+}
+
+.resume-row .col-xs-12 {
+    display: flex; 
+    flex-direction: column;
+}
+
+.resume-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 100%;
+}
+
+.resume-row-label {
+    padding: 20px 0;
+}
+
+@media (max-width:991px){
+    .resume-item {
+        text-align: center;
+    }
+    .template-example {
+        margin-left: 0;
+    }
+    
+    .resume-row {
+        align-items: center;
+    }
+    
+    .resume-logo {
+        align-items: center;
+        padding: 20px 0;
+    }
+}
+
+.resume-link-icon {
+  font-size: 60px;
+  color: #333;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.resume-link-icon:hover {
+  color: #000000;
+  transform: scale(1.1);
+}
+
+.resume-logo a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
